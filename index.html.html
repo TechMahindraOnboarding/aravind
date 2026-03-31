@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Onboarding Details - Tech Mahindra</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f5f5f5;
+    }
+
+    /* Header Styling */
+    .header {
+      background: white;
+      padding: 10px 40px;
+      border-bottom: 3px solid #b30000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .logo-text {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .tech { color: black; }
+    .mahindra { color: #b30000; }
+
+    .nav {
+      font-size: 13px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    .nav span {
+      margin-left: 25px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    /* Layout Styling */
+    .container {
+      display: flex;
+      min-height: calc(100vh - 70px);
+    }
+
+    .sidebar {
+      width: 240px;
+      background: #800000;
+      color: white;
+      padding-top: 30px;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #ffcccc;
+      padding: 15px 25px;
+      text-decoration: none;
+      font-size: 14px;
+      border-bottom: 1px solid #990000;
+      transition: 0.3s;
+    }
+
+    .sidebar a.active {
+      background: #b30000;
+      color: white;
+      font-weight: bold;
+    }
+
+    .main {
+      flex: 1;
+      padding: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      max-width: 850px;
+      margin-bottom: 25px;
+    }
+
+    h2 { 
+      color: #b30000; 
+      border-bottom: 2px solid #f0f0f0;
+      padding-bottom: 15px;
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    /* Data Grid */
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .label {
+      font-weight: bold;
+      color: #888;
+      font-size: 12px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .value {
+      color: #333;
+      font-size: 16px;
+    }
+
+    /* Highlighted Name Styling */
+    .highlight-name {
+      font-weight: 900;
+      color: #000;
+      font-size: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    /* Interactive Elements */
+    select.value {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      background-color: #fff;
+      font-family: inherit;
+      width: 100%;
+      max-width: 250px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .btn-container {
+      margin-top: 30px;
+      text-align: right;
+    }
+
+    .btn-submit {
+      background-color: #b30000;
+      color: white;
+      padding: 14px 40px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-submit:hover {
+      background-color: #800000;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="logo-text">
+      <span class="tech">Tech</span><span class="mahindra">mahindra</span>
+    </div>
+    <div class="nav">
+      <span>Life at TechM</span>
+      <span>Get Started</span>
+      <span>Alumni</span>
+      <span>Contact Us</span>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="sidebar">
+      <a href="#">Dashboard</a>
+      <a href="#">Profile Info</a>
+      <a href="#" class="active">Onboarding Details</a>
+      <a href="#">My Documents</a>
+    </div>
+
+    <div class="main">
+      <div class="card">
+        <h2>Employee Profile</h2>
+        <div class="info-grid">
+          <div class="field">
+            <span class="label">Full Name</span>
+            <span class="value highlight-name" id="empName">SALADI GANGA KANAKA SURYASRI</span>
+          </div>
+          <div class="field">
+            <span class="label">Employee ID</span>
+            <span class="value">2955057</span>
+          </div>
+          <div class="field">
+            <span class="label">Email Address</span>
+            <span class="value">suryasri425.s@gmail.com</span>
+          </div>
+          <div class="field">
+            <span class="label">Mobile Number</span>
+            <span class="value">+91 6304165764</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Onboarding & Employment</h2>
+        <div class="info-grid">
+          <div class="field">
+            <span class="label">Joining Date</span>
+            <select class="value" id="joinDate">
+              <option value="" disabled selected>-- Select Your Joining Date --</option>
+              <option value="03-Apr-2026">03-Apr-2026</option>
+              <option value="09-Apr-2026">09-Apr-2026</option>
+              <option value="14-Apr-2026">14-Apr-2026</option>
+              <option value="27-Apr-2026">27-Apr-2026</option>
+            </select>
+          </div>
+          <div class="field">
+            <span class="label">Department</span>
+            <span class="value">Information Technology (IT)</span>
+          </div>
+          <div class="field">
+            <span class="label">Work Location</span>
+            <span class="value">Hyderabad, India</span>
+          </div>
+          <div class="field">
+            <span class="label">Current Status</span>
+            <span class="value" style="color: #27ae60; font-weight: bold;">● Active</span>
+          </div>
+        </div>
+
+        <div class="btn-container">
+          <button type="button" class="btn-submit" onclick="confirmSubmission()">Submit Changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function confirmSubmission() {
+      const name = document.getElementById('empName').innerText;
+      const dateElement = document.getElementById('joinDate');
+      const selectedDate = dateElement.value;
+
+      if (!selectedDate) {
+        alert("Action Required: Please select a valid joining date before submitting.");
+        return;
+      }
+
+      // Professional Confirmation Pop-up
+      const confirmationText = `CONFIRMATION DETAILS:\n\n` +
+                               `Employee Name: ${name}\n` +
+                               `Requested Date: ${selectedDate}\n\n` +
+                               `Are you sure you want to update your onboarding schedule?`;
+      
+      if (confirm(confirmationText)) {
+        alert("Success! Your onboarding details have been submitted to HR.");
+      }
+    }
+  </script>
+
+</body>
+</html>
